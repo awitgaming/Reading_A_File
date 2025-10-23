@@ -11,14 +11,30 @@ using System.Windows.Forms;
 
 namespace Reading_A_File
 {
-    public partial class FrmOpenTextFile : Form
+    public partial class FrmStudentRecord : Form
     {
-        public FrmOpenTextFile()
+        public FrmStudentRecord()
         {
             InitializeComponent();
         }
 
-        public void DisplayToList()
+        private void FrmStudentRecord_Load(object sender, EventArgs e)
+        {
+
+        }
+
+        private void label1_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void btnRegister_Click(object sender, EventArgs e)
+        {
+            this.Hide();
+            new FrmRegistration().Show();
+        }
+
+        private void btnFind_Click(object sender, EventArgs e)
         {
             openFileDialog1.InitialDirectory = @"C:\";
             openFileDialog1.Title = "Browse Text Files";
@@ -32,35 +48,20 @@ namespace Reading_A_File
                 while ((_getText = streamReader.ReadLine()) != null)
                 {
                     Console.WriteLine(_getText);
-                    lvShowText.Items.Add(_getText);
+                    lvViewRecord.Items.Add(_getText);
                 }
             }
         }
 
-        private void FrmOpenTextFile_Load(object sender, EventArgs e)
+        private void btnUpload_Click(object sender, EventArgs e)
         {
-
+            MessageBox.Show("Successfully Uploaded");
+            lvViewRecord.Clear();
         }
 
         private void listView1_SelectedIndexChanged(object sender, EventArgs e)
         {
 
-        }
-
-        private void openFileDialog1_FileOk(object sender, CancelEventArgs e)
-        {
-
-        }
-
-        private void btnOpen_Click(object sender, EventArgs e)
-        {
-            DisplayToList();
-        }
-
-        private void button1_Click(object sender, EventArgs e)
-        {
-            this.Hide();
-            new FrmStudentRecord().Show();
         }
     }
 }
