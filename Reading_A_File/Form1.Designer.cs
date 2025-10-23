@@ -1,6 +1,6 @@
 ﻿namespace Reading_A_File
 {
-    partial class Form1
+    partial class FrmOpenTextFile
     {
         /// <summary>
         /// Required designer variable.
@@ -30,13 +30,14 @@
         {
             this.SuspendLayout();
             // 
-            // Form1
+            // FrmOpenTextFile
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(427, 261);
-            this.Name = "Form1";
-            this.Text = "Form1";
+            this.ClientSize = new System.Drawing.Size(447, 311);
+            this.Name = "FrmOpenTextFile";
+            this.Text = "FrmOpenTextFile";
+            this.Load += new System.EventHandler(this.FrmOpenTextFile_Load);
             this.ResumeLayout(false);
 
         }

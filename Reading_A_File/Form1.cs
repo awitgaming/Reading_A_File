@@ -10,11 +10,16 @@ using System.Windows.Forms;
 
 namespace Reading_A_File
 {
-    public partial class Form1 : Form
+    public partial class FrmOpenTextFile : Form
     {
-        public Form1()
+        public FrmOpenTextFile()
         {
             InitializeComponent();
+        }
+
+        private void FrmOpenTextFile_Load(object sender, EventArgs e)
+        {
+
         }
     }
 }
